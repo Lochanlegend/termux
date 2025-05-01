@@ -1,0 +1,100 @@
+pkg update && pkg upgrade
+pkg install git openssh -y
+
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+cat ~/.ssh/id_ed25519.pub
+Add this key to GitHub:
+Settings → SSH and GPG keys → New SSH key
+
+ssh -T git@github.com
+
+git clone git@github.com:username/repo.git
+
+mkdir my-project && cd my-project
+git init
+git status
+git add filename.txt  # Add single file
+git add .            # Add all modified files
+git commit -m "Your commit message"
+
+git push origin main
+git pull origin main
+git checkout -b new-branch
+
+git branch -a
+
+git checkout branch-name
+
+git checkout main
+git merge branch-name
+
+git remote add origin git@github.com:username/repo.git
+
+git remote -v
+
+git remote set-url origin git@github.com:username/new-repo.git
+
+git remote remove origin
+
+git restore filename.txt
+git reset HEAD filename.txt
+git reset --hard HEAD
+git revert commit-hash
+
+git stash
+git stash pop  # Restore stashed changes
+git log --oneline  # Compact view
+git log --graph --all --decorate  # Visual branch history
+git diff           # Unstaged changes
+git diff --staged  # Staged changes
+
+git tag -a v1.0 -m "First release"
+git push origin --tags
+
+git tag -a v1.0 -m "First release"
+git push origin --tags
+
+pkg install gh
+gh auth login
+
+pkg install nano
+nano README.md  # Edit files
+
+pkg install curl
+curl -H "Authorization: token YOUR_TOKEN" https://api.github.com/user/repos
+
+git remote set-url origin git@github.com:username/repo.git
+
+git config --global core.autocrlf false
+
+git checkout HEAD -- filename.txt
+
+
+
+Action	Command
+Clone Repo	git clone git@github.com:user/repo.git
+Commit Changes	git add . && git commit -m "msg"
+Push to GitHub	git push origin main
+Pull Updates	git pull origin main
+Create Branch	git checkout -b new-branch
+Merge Branch	git merge branch-name
+Undo Changes	git restore file.txt
+Reset Hard	git reset --hard HEAD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
